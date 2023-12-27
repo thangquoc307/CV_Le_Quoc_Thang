@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Roboto:wght@500&display=swap');
+* {
+    font-family: 'Roboto', sans-serif;
+    color: #151018;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.color0 {
+    background-color: white;
+}
+.color1 {
+    background-color: #c1151a;
+}
+.color2 {
+    background-color: #e49db1;
+}
+.color3 {
+    background-color: #ccc5d9;
+}
+.color4 {
+    background-color: #57546a;
+    color: white;
+}
+.color5 {
+    background-color: #151018;
+    color: white;
+}
+.borderradius {
+    border-radius: var(--borderRadius);
+}
+.rounding {
+    border-radius: 50%;
+}
+.boxshadow-inset{
+    box-shadow: inset 10px 10px 20px #151018;
+}
+.boxshadow-outset{
+    box-shadow: 10px 10px 20px #151018;
+}
+.dropshadow {
+    filter: drop-shadow(10px 10px 20px #151018);
+}
+.cursorPoint{
+    cursor: pointer;
+}
+.targetText{
+    alignment-baseline: middle;
+    text-anchor: middle;
+    text-shadow:
+            1px 1px 0 white,
+            -1px -1px 0 white,
+            1px -1px 0 white,
+            -1px 1px 0 white;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+.textAlert {
+    color: #c1151a;
+    font-weight: bold;
+}
+@keyframes topSlide {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+@keyframes bottomSlide {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+@keyframes leftSlide {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+@keyframes rightSlide {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}

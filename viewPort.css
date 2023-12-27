@@ -1,0 +1,80 @@
+:root {
+    --viewportWidth: 1800px;
+    --viewportHeight: 900px
+}
+#viewport {
+    position: fixed;
+    width: var(--viewportWidth);
+    height: var(--viewportHeight);
+    top: calc((100vh - var(--viewportHeight))/2);
+    left: calc((100% - var(--viewportWidth))/2);
+    background-color: rgba(21, 16, 24, 0.9);
+    display: none;
+    padding: calc(var(--offset)/2);
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-columns: 300px 50px 1fr 50px;
+    grid-template-areas: "array name name close" "array previous detail next" "array none1 description none2";
+    animation: ease-in-out 0.2s leftSlide;
+}
+#viewport-array {
+    grid-area: array;
+    width: calc(100% - var(--offset)/2);
+    background-color: rgba(204, 197, 217, 0.6);
+    height: calc(var(--viewportHeight) - var(--offset));
+    overflow: auto;
+}
+#viewport-name {
+    grid-area: name;
+    font-size: 25px;
+    padding-left: var(--offset);
+}
+#viewport-close {
+    grid-area: close;
+    background-image: url("icon/close-array.png");
+}
+#viewport-previous {
+    grid-area: previous;
+    background-image: url("icon/prev-icon.png");
+}
+#viewport-detail {
+    grid-area: detail;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#viewport-next {
+    grid-area: next;
+    background-image: url("icon/next-icon.png");
+}
+#viewport-description {
+    grid-area: description;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+#viewport-close, #viewport-previous, #viewport-next {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+#viewport-close:hover, #viewport-previous:hover, #viewport-next:hover {
+    scale: 1.1;
+    transition-duration: 0.2s;
+}
+.viewport-array-div {
+    width: calc(100% - 30px);
+    margin: 15px;
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-duration: 0.2s;
+    border: 3px white solid;
+}
+#viewport-array div:hover {
+    scale: 1.03;
+    transition-duration: 0.2s;
+    border: 3px #e49db1 solid;
+}
