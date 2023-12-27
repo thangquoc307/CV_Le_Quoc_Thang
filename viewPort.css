@@ -19,7 +19,7 @@
 #viewport-array {
     grid-area: array;
     width: calc(100% - var(--offset)/2);
-    background-color: rgba(204, 197, 217, 0.6);
+    background-color: rgba(204, 197, 217, 0.5);
     height: calc(var(--viewportHeight) - var(--offset));
     overflow: auto;
 }

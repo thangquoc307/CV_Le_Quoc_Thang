@@ -1,0 +1,29 @@
+:root {
+    --skillHeight: 80px;
+}
+.cv-page-body-skill-container {
+    height: calc(var(--skillHeight) - 10px);
+    width: 500px;
+    margin: 5px 0 5px calc(100% - 500px);
+    border-radius: 100px;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    padding: 10px 10px 10px 20px;
+}
+.cv-page-body-skill-container-title {
+    display: flex;
+    align-items: center;
+}
+.cv-page-body-skill-container-list {
+    border-radius: 100px;
+    display: flex;
+    flex-direction: row;
+}
+.cv-page-body-skill-container-list-item {
+    width: 50px;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: alias;
+}

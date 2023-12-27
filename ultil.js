@@ -30,7 +30,7 @@ const certificate = [
         img: "./certificate/code_marathon",
         name: "Hackathon - National Algorithm Competition",
         time: "05-09-2023",
-        type: "problemSolving"
+        type: "award"
     },
     {
         img: "./certificate/java_basic_certificate",
@@ -101,7 +101,70 @@ const icon = {
     git: "./icon/git.png",
     scrum: "./icon/scrum.png",
     lhx: "./icon/learn.png",
-    kanban: "./icon/kanban.png"
+    kanban: "./icon/kanban.png",
+    award: "./icon/award.png"
+}
+const skillList = {
+    language: {
+        name: "Language",
+        data: [
+            {
+                name: "Java",
+                img: "./icon/java.png"
+            },
+            {
+                name: "Java Script",
+                img: "./icon/JS.png"
+            },
+            {
+                name: "HTML",
+                img: "./icon/html.png"
+            },
+            {
+                name: "Css",
+                img: "./icon/css.png"
+            }
+        ]
+    },
+    database: {
+        name: "Database",
+        data: [
+            {
+                name: "MySQL",
+                img: "./icon/mySQL.png"
+            },
+            {
+                name: "Firebase Realtime Database",
+                img: "./icon/realtimeDatabase.png"
+            }
+        ]
+    },
+    framework: {
+        name: "Framework/Library",
+        data: [
+            {
+                name: "Spring Boots",
+                img: "./icon/spring.png"
+            },
+            {
+                name: "Spring MVC",
+                img: "./icon/spring.png"
+            },
+            {
+                name: "React JS",
+                img: "./icon/react.png"
+            },
+            {
+                name: "Redux JS",
+                img: "./icon/redux.png"
+            },
+            {
+                name: "BootsTrap",
+                img: "./icon/bootstrap.png"
+            }
+        ]
+    },
+
 }
 let array;
 function setupInformation () {
@@ -151,7 +214,36 @@ function setupInformation () {
     document.getElementById("contact").innerHTML = contactData;
     document.getElementById("link").innerHTML = linkData;
     document.getElementById("certificate").innerHTML = certificateData;
+}
+function setupSkill () {
+    let data = "";
+    for(let container in skillList) {
+        data += `<div class="cv-page-body-skill-container color3">
+                    <div id="skill-${skillList[container].name}" 
+                        class="cv-page-body-skill-container-title">${skillList[container].name}</div>
+                    <div class="cv-page-body-skill-container-list color0">`
+        for (let i = 0; i < skillList[container].data.length; i++) {
+            let object = skillList[container].data[i];
+            data += `<div style="background-image: url('${object.img}')"
+                    class="cv-page-body-skill-container-list-item"
+                    onmouseover="showSkillName('skill-${skillList[container].name}', '${object.name}', 'show')"
+                    onmouseleave="showSkillName('skill-${skillList[container].name}', '${skillList[container].name}', 'default')"
+                    ></div>`
 
+        }
+
+
+        data += `</div></div>`
+    }
+    document.getElementById("skill").innerHTML = data;
+
+}
+function showSkillName(idDisplay, name, action) {
+    if (action == "show") {
+        document.getElementById(idDisplay).innerHTML = `<div class="textAlert">${name}</div>`
+    } else {
+        document.getElementById(idDisplay).innerText = name;
+    }
 }
 function showImage(index, arrayInd) {
     document.getElementById("viewport").style.display = "grid";
@@ -177,7 +269,6 @@ function showImage(index, arrayInd) {
     document.getElementById("viewport-description").innerText = `Issue Date: ${array[index].time}`;
 }
 function changeImage(index) {
-
     let allDiv = document.querySelectorAll(".viewport-array-div");
     allDiv.forEach(e => e.style.border = "3px white solid");
 
@@ -205,9 +296,7 @@ function gotoContact (index) {
         case 4:
             window.open("https://www.hackerrank.com/profile/lequocthang307", "_blank");
             break;
-
     }
-
 }
 function reduceText (str, length) {
     if (str.length <= length) {
@@ -223,3 +312,4 @@ function closeBoard () {
 
 
 setupInformation();
+setupSkill();
