@@ -97,9 +97,13 @@
     grid-template-areas: "img name name name" "img role role role" "img time git more";
     grid-template-columns: auto 1fr 50px 120px;
     cursor: default;
+    transition-duration: 0.2s;
+
 }
 .cv-page-body-project-detail-item:hover {
     animation: infinite 2s changeBorder;
+    box-shadow: #151018 15px 15px 15px;
+    transition-duration: 0.2s;
 }
 @keyframes changeBorder {
     0% {
