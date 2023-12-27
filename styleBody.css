@@ -1,6 +1,15 @@
 :root {
     --skillHeight: 80px;
 }
+.cv-page-body-skill {
+    grid-area: skill;
+    padding-left: var(--offset);
+}
+.cv-page-body-description {
+    grid-area: description;
+    padding-left: var(--offset);
+
+}
 .cv-page-body-skill-container {
     height: calc(var(--skillHeight) - 10px);
     width: 500px;
@@ -9,6 +18,7 @@
     display: grid;
     grid-template-columns: 150px 1fr;
     padding: 10px 10px 10px 20px;
+    animation: ease-in-out 0.2s rightSlide;
 }
 .cv-page-body-skill-container-title {
     display: flex;
@@ -27,3 +37,52 @@
     background-repeat: no-repeat;
     cursor: alias;
 }
+.cv-page-body-work-experience {
+    grid-area: workExperience;
+    padding-left: var(--offset);
+}
+.cv-page-body-description-signature {
+    text-align: end;
+    padding-right: var(--offset);
+}
+.workExperience-container {
+    margin: 20px;
+    display: grid;
+    grid-template-areas: "time time" "logo company" "logo role";
+    grid-template-rows: 30px repeat(2, 20px);
+    grid-template-columns: 100px auto;
+    border-bottom: #151018 1px dashed;
+
+}
+.workExperience-img {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: logo;
+}
+.workExperience-time {
+    grid-area: time;
+}
+.workExperience-title {
+    font-weight: bold;
+    font-size: 18px;
+    grid-area: company;
+    display: flex;
+    align-items: center;
+}
+.workExperience-role {
+    grid-area: role;
+    color: #57546a;
+}
+.cv-page-body-project {
+    grid-area: project;
+    margin-top: var(--offset);
+}
+.cv-page-body-project h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

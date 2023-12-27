@@ -3,7 +3,7 @@
     --heightHeader: 300px;
     --offset: 50px;
     --borderRadius: 20px;
-    --certificateHeight: 500px;
+    --certificateHeight: 700px;
 }
 .cv-page {
     width: var(--widthPage);
@@ -130,14 +130,24 @@
     display: grid;
     padding: var(--offset);
     grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+            "award description"
+            "certificate description"
+            "certificate skill"
+            "certificate workExperience"
+            "project project"
+            "footer footer";
 }
 .cv-page-body-certificate {
     animation: ease-in-out 0.2s leftSlide;
+    grid-area: certificate;
+    height: fit-content;
 }
 .cv-page-body-certificate-list {
     height: var(--certificateHeight);
     overflow-y: scroll;
     position: relative;
+    grid-area: certificate;
 }
 .cv-page-body-certificate-title {
     height: 40px;
@@ -184,6 +194,19 @@
 }
 .cv-page-body-certificate-list::-webkit-scrollbar-button {
     opacity: 0;
+}
+.cv-page-body-footer {
+    grid-area: footer;
+    height: 200px;
+    background-image: url("logo/r-logo-gray.png");
+    background-position: right bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: end;
+    font-size: 30px;
+    color: #57546a;
+    font-weight: bold;
 }
 
 

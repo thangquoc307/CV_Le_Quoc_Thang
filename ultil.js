@@ -164,8 +164,142 @@ const skillList = {
             }
         ]
     },
-
-}
+};
+const workExp = [
+    {
+        img: "./icon/codegym.png",
+        time: "6/2023 - 12/2023",
+        company: "CODEGYM DANANG",
+        role: "Java web full stack developer"
+    },
+    {
+        img: "./icon/DNC.png",
+        time: "2022 - 2023",
+        company: "DOANNHAT JSC M&E PROFESSIONAL CONTRACTOR",
+        role: "M&E Engineer - Shopdrawing"
+    },
+    {
+        img: "./icon/searee.png",
+        time: "2018 - 2022",
+        company: "SEAREE REFRIGERATION ELECTRICAL ENGINEERING CORPORATION",
+        role: "M&E Engineer - BIM Manager"
+    },
+    {
+        img: "./icon/dut.png",
+        time: "2013 - 2018",
+        company: "DANANG UNIVERSITY OF SCIENCE AND TECHNOLOGY",
+        role: "Refrigeration and Air Conditioning Industry"
+    }
+];
+const projectArr = [
+    {
+        duration: "2 Weeks",
+        name: "LQT - SERVICE (PERSONAL PROJECT)",
+        role: "Programmer",
+        description: [
+            `A project that connects individuals in need of electrical 
+            and plumbing repairs with skilled technicians.`,
+            `Utilizes a 3D model of the ThangQuoc Apartment,
+             enhancing the user experience through the combination of CSS and JS
+              to create an interactive 3D environment.`,
+            `Incorporates a time management feature linked to a 3D map,
+             facilitating easy tracking of job assignments and convenient navigation.`,
+            `Real-time chat technology enables seamless communication for administrators, 
+            users, and employees.Implements Redux to synchronize states across various components.`,
+            `Ensures security through JWT (JSON Web Tokens), 
+            allowing for easy scalability across different device platforms`,
+        ],
+        technologies: [
+            "Revit",
+            "Enscape",
+            "Photoshop",
+            "FirebaseStorage",
+            "FirebaseRealtimeDatabase",
+            "ReactJS",
+            "Redux",
+            "JSX",
+            "SpringBoots",
+            "ORM",
+            "Hibernate"
+        ],
+        img: [],
+        link: "https://github.com/thangquoc307/LQT-ME-Service"
+    },
+    {
+        duration: "3 Weeks",
+        name: "EROS05 - DATING",
+        role: "Leader, Git Manager, Programmer",
+        description: [
+            `Team project to build a dating website, designed as a social network integrating features such as gift-giving,
+             and interactive connections.`,
+            `The website serves as a social platform where users can interact, connect, and engage with each other.`,
+            `Incorporates features for virtual gifting to enhance user experience and foster connections.`,
+            `Provides a seamless and user-friendly environment for individuals to build relationships and socialize.`,
+            `Utilizes modern web technologies to create an intuitive and visually appealing platform.`,
+        ],
+        technologies: [
+            "ReactJS",
+            "SpringBoot",
+            "SpringFramework",
+            "ORM",
+            "JPA",
+            "Hibernate",
+            "FirebaseRealtimeDatabase"
+        ],
+        img: [],
+        link: "https://github.com/c0523g1-Org-module6-sprint1"
+    },
+    {
+        duration: "2 Weeks",
+        name: "PARKINGLOT",
+        role: "Leader, 3D Model Creation, CRUD for parking lots, Homepage Development",
+        description: [
+            `The Parkinglot Management project focuses on efficiently managing
+             the parking spaces within ThangQuoc Apartment`,
+            `Utilizes Autodesk Revit for creating a 3D model, rendering through Enscape, 
+            and incorporates CSS, JS, and asynchronous data transmission 
+            using Ajax to provide interactive 3D functionalities for parking management,
+             selection, and notifications.`
+        ],
+        technologies: [
+            "Revit",
+            "Enscape",
+            "Photoshop",
+            "FirebaseStorage",
+            "SpringFramework",
+            "ORM",
+            "JPA",
+            "Hibernate",
+            "Thymeleaf",
+            "SpringBoot",
+            "Ajax",
+            "jQuery"
+        ],
+        img: [],
+        link: "https://github.com/project-web-parkinglot/module-4-case"
+    },
+    {
+        duration: "2 Weeks",
+        name: "BOOKING VILLA",
+        role: "Leader, CRUD Operations for Villas, Homepage Development",
+        description: [
+            `The Booking Villa project is a collaborative effort 
+            involving a team of four individuals focused on villa booking and management.
+             The project encompasses user, employee, and villa management functionalities.`
+        ],
+        technologies: [
+            "MySQL",
+            "Bootstrap",
+            "JSP",
+            "Servlet",
+            "JDBC",
+            "JSTL",
+            "FirebaseStorage"
+        ],
+        img: [],
+        link: "https://github.com/thangquoc307/Casestudy-Booking-Villa"
+    },
+];
 let array;
 function setupInformation () {
     let contactData = "";
@@ -216,7 +350,7 @@ function setupInformation () {
     document.getElementById("certificate").innerHTML = certificateData;
 }
 function setupSkill () {
-    let data = "";
+    let data = "<h2>TECHNICAL SKILLS</h2>";
     for(let container in skillList) {
         data += `<div class="cv-page-body-skill-container color3">
                     <div id="skill-${skillList[container].name}" 
@@ -237,6 +371,30 @@ function setupSkill () {
     }
     document.getElementById("skill").innerHTML = data;
 
+}
+function setupWordExp () {
+    let data = "<h2>WORK EXPERIENCE</h2>";
+    for (exp in workExp){
+        let object = workExp[exp];
+
+        data += `<div class="workExperience-container">
+                 <div class="workExperience-time">🕒 ${object.time}</div>
+                 <div class="workExperience-img" style="background-image: url('${object.img}')"></div>
+                 <div class="workExperience-title">${object.company}</div>
+                 <div class="workExperience-role">${object.role}</div>
+                </div>`
+    }
+    document.getElementById("workExperience").innerHTML = data;
+}
+function setupProject () {
+    let data = "<hr><h2>💻💻 PROJECTS 💻💻</h2>"
+    for (let project in projectArr) {
+        let object = projectArr[project];
+        data += ``
+    }
+
+
+    document.getElementById("project").innerHTML = data;
 }
 function showSkillName(idDisplay, name, action) {
     if (action == "show") {
@@ -310,6 +468,7 @@ function closeBoard () {
 }
 
 
-
+setupWordExp();
 setupInformation();
 setupSkill();
+setupProject();
