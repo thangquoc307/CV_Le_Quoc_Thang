@@ -222,7 +222,18 @@ const projectArr = [
             "ORM",
             "Hibernate"
         ],
-        img: [],
+        img: [
+            "./image/lqt_service/0.png",
+            "./image/lqt_service/1.png",
+            "./image/lqt_service/2.png",
+            "./image/lqt_service/3.png",
+            "./image/lqt_service/4.png",
+            "./image/lqt_service/5.png",
+            "./image/lqt_service/6.png",
+            "./image/lqt_service/7.png",
+            "./image/lqt_service/8.png",
+            "./image/lqt_service/9.png",
+        ],
         link: "https://github.com/thangquoc307/LQT-ME-Service"
     },
     {
@@ -246,7 +257,12 @@ const projectArr = [
             "Hibernate",
             "FirebaseRealtimeDatabase"
         ],
-        img: [],
+        img: [
+            "./image/eros05/0.png",
+            "./image/eros05/1.png",
+            "./image/eros05/2.png",
+            "./image/eros05/3.png"
+        ],
         link: "https://github.com/c0523g1-Org-module6-sprint1"
     },
     {
@@ -275,7 +291,13 @@ const projectArr = [
             "Ajax",
             "jQuery"
         ],
-        img: [],
+        img: [
+            "./image/parkinglot/0.jpg",
+            "./image/parkinglot/1.jpg",
+            "./image/parkinglot/2.jpg",
+            "./image/parkinglot/3.jpg",
+            "./image/parkinglot/4.jpg"
+        ],
         link: "https://github.com/project-web-parkinglot/module-4-case"
     },
     {
@@ -296,7 +318,13 @@ const projectArr = [
             "JSTL",
             "FirebaseStorage"
         ],
-        img: [],
+        img: [
+            "./image/bookingvilla/0.png",
+            "./image/bookingvilla/1.png",
+            "./image/bookingvilla/2.png",
+            "./image/bookingvilla/3.png",
+            "./image/bookingvilla/4.png"
+        ],
         link: "https://github.com/thangquoc307/Casestudy-Booking-Villa"
     },
 ];
@@ -387,14 +415,39 @@ function setupWordExp () {
     document.getElementById("workExperience").innerHTML = data;
 }
 function setupProject () {
-    let data = "<hr><h2>💻💻 PROJECTS 💻💻</h2>"
+    let data = `<hr>
+                        <h2>💻💻 PROJECTS 💻💻</h2>
+                        <div class="cv-page-body-project-detail">`
     for (let project in projectArr) {
         let object = projectArr[project];
-        data += ``
+        data += `<div class="borderradius cv-page-body-project-detail-item boxshadow-outset">
+                    <div class="cv-page-body-project-detail-item-img"
+                        style="background-image: url('${object.img[0]}')"
+                    ></div>
+                    <div class="cv-page-body-project-detail-item-name textAlert">
+                        ${object.name}
+                    </div>
+                    <div class="cv-page-body-project-detail-item-role">
+                        🛠 Role: ${reduceText(object.role, 35)}
+                    </div>
+                    <div class="cv-page-body-project-detail-item-time">
+                        ⌛️ Duration: ${object.duration}
+                    </div>
+                    <div class="cv-page-body-project-detail-item-more cursorPoint color4" title="See Detail">
+                        Detail 📋
+                    </div>
+                    <div class="cv-page-body-project-detail-item-git cursorPoint" title="GitHub"
+                        onclick="navigate('${object.link}')"
+                    ></div>
+                </div>`
     }
 
 
+    data += "</div>";
     document.getElementById("project").innerHTML = data;
+}
+function navigate (link) {
+    window.open(link, "_blank")
 }
 function showSkillName(idDisplay, name, action) {
     if (action == "show") {

@@ -85,4 +85,97 @@
     justify-content: center;
     align-items: center;
 }
+.cv-page-body-project-detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cv-page-body-project-detail-item {
+    width: calc(100% - var(--offset));
+    margin: calc(var(--offset)/2);
+    border: #57546a 3px solid;
+    display: grid;
+    grid-template-areas: "img name name name" "img role role role" "img time git more";
+    grid-template-columns: auto 1fr 50px 120px;
+    cursor: default;
+}
+.cv-page-body-project-detail-item:hover {
+    animation: infinite 2s changeBorder;
+}
+@keyframes changeBorder {
+    0% {
+        border: #57546a 3px solid;
+    }
+    25% {
+        border: #e49db1 3px solid;
+    }
+    50% {
+        border: #c1151a 3px solid;
+    }
+    75% {
+        border: #e49db1 3px solid;
+    }
+    100% {
+        border: #57546a 3px solid;
+    }
+}
+.cv-page-body-project-detail-item-img {
+    grid-area: img;
+    width: 200px;
+    aspect-ratio: 4/3;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: #57546a 1px solid;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.cv-page-body-project-detail-item-name {
+    font-size: 18px;
+    grid-area: name;
+    padding: 10px 0 10px var(--offset);
+}
+.cv-page-body-project-detail-item-role {
+    grid-area: role;
+    padding-left: calc(var(--offset)/2);
+}
+.cv-page-body-project-detail-item-time {
+    grid-area: time;
+    padding-left: calc(var(--offset)/2);
+}
+.cv-page-body-project-detail-item-more {
+    grid-area: more;
+    height: 50px;
+    border-radius: 100px;
+    margin: 0 10px;
+    width: calc(100% - 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #ccc5d9 2px solid;
+    transition-duration: 0.2s;
+}
+.cv-page-body-project-detail-item-more:hover {
+    transition-duration: 0.2s;
+    background-color: #c1151a;
+    color: #151018;
+    border: #151018 2px solid;
+    scale: 1.03;
+}
+.cv-page-body-project-detail-item-git {
+    grid-area: git;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("icon/git.png");
+    border-radius: 50%;
+    transition-duration: 0.2s;
+}
+.cv-page-body-project-detail-item-git:hover {
+    scale: 1.1;
+    transition-duration: 0.2s;
+}
+
+
 
