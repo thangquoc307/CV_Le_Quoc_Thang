@@ -551,6 +551,7 @@ function showSkillName(idDisplay, name, action) {
     }
 }
 function showImage(index, arrayInd) {
+    closeProjectBoard();
     document.getElementById("viewport").style.display = "grid";
     let arrayCertificate = "";
     switch (arrayInd) {
@@ -633,6 +634,7 @@ function delInterval () {
     intervalArr = [];
 }
 function showProjectDetail (index) {
+    closeBoard();
     let project = projectArr[index];
     let descriptionArr = "";
     for (let i = 0; i < project.description.length; i++) {
