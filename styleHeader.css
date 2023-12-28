@@ -141,6 +141,49 @@
             "project project"
             "footer footer";
 }
+.cv-page-body-award {
+    grid-area: award;
+    width: 100%;
+    aspect-ratio: 4/3;
+    margin-bottom: var(--offset);
+    display: grid;
+    grid-template-columns: 40px 1fr;
+}
+@keyframes changeAwardImg {
+    0% {
+        background-image: url("award/hackathonck.png");
+    }
+    20% {
+        background-image: url("award/leader6.png");
+    }
+    40% {
+        background-image: url("award/bestemployee.png");
+    }
+    60% {
+        background-image: url("award/leader7.png");
+    }
+    80% {
+        background-image: url("award/leader6.png");
+    }
+    100% {
+        background-image: url("award/hackathonck.png");
+    }
+
+}
+.cv-page-body-award-title {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cv-page-body-award-img {
+    background-image: url("award/hackathonck.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: infinite 10s changeAwardImg;
+}
 .cv-page-body-certificate {
     animation: ease-in-out 0.2s leftSlide;
     grid-area: certificate;

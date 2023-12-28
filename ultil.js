@@ -451,7 +451,7 @@ function setupInformation () {
     }
     for (let i = 0; i < certificate.length; i++) {
         let object = certificate[i];
-        certificateData += `<div class="cv-page-body-certificate-container cursorPoint"
+        certificateData += `<div class="cv-page-body-certificate-container cursorPoint borderradius"
                                 onclick="showImage(${i}, 0)"
                             >
                                 <div class="cv-page-body-certificate-container-image"
