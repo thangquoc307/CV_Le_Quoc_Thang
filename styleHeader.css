@@ -198,12 +198,12 @@
     font-weight: bold;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1920px) {
     :root {
         --widthPage: 1200px;
     }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
     :root {
         --widthPage: 1000px;
     }
@@ -218,6 +218,6 @@
         grid-template-rows: 2fr 1fr;
     }
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 1024px) {
 
 }
