@@ -570,7 +570,7 @@ function showImage(index, arrayInd) {
 
     document.getElementById("viewport-name").innerText = array[index].name;
     document.getElementById("viewport-array").innerHTML = arrayCertificate;
-    document.getElementById("viewport-detail").style.backgroundImage =  `url(${array[index].img}.png)`;
+    document.getElementById("viewport-detail").style.backgroundImage =  `url(${array[index].img}.webp)`;
     document.getElementById("viewport-description").innerText = `Issue Date: ${array[index].time}`;
 }
 function changeImage(index) {
@@ -581,7 +581,7 @@ function changeImage(index) {
     selector.style.border = `3px #c1151a solid`;
 
     document.getElementById("viewport-name").innerText = array[index].name;
-    document.getElementById("viewport-detail").style.backgroundImage =  `url(${array[index].img}.png)`;
+    document.getElementById("viewport-detail").style.backgroundImage =  `url(${array[index].img}.webp)`;
     document.getElementById("viewport-description").innerText = `Issue Date: ${array[index].time}`;
 }
 function gotoContact (index) {
