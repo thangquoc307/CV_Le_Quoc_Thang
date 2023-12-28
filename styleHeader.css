@@ -144,8 +144,6 @@
     height: fit-content;
 }
 .cv-page-body-certificate-list {
-    height: var(--certificateHeight);
-    overflow-y: scroll;
     position: relative;
     grid-area: certificate;
 }
@@ -183,17 +181,6 @@
 .cv-page-body-certificate-container:hover {
     background-color: rgba(0, 128, 0, 0.3);
     transition-duration: 0.2s;
-}
-.cv-page-body-certificate-list::-webkit-scrollbar {
-    width: 10px;
-    position: absolute;
-}
-.cv-page-body-certificate-list::-webkit-scrollbar-thumb {
-    background-color: #ccc5d9;
-    border-radius: 20px;
-}
-.cv-page-body-certificate-list::-webkit-scrollbar-button {
-    opacity: 0;
 }
 .cv-page-body-footer {
     grid-area: footer;

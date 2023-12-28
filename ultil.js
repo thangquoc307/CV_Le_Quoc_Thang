@@ -144,7 +144,7 @@ const skillList = {
         data: [
             {
                 name: "Spring Boots",
-                img: "./icon/spring.png"
+                img: "./icon/springboot.png"
             },
             {
                 name: "Spring MVC",
@@ -191,6 +191,97 @@ const workExp = [
         role: "Refrigeration and Air Conditioning Industry"
     }
 ];
+const iconTech = {
+    Revit: {
+        img: "./tech/revit.png",
+        name: "Autodesk Revit"
+    },
+    Enscape: {
+        img: "./tech/enscape.png",
+        name: "Enscape"
+    },
+    Photoshop: {
+        img: "./tech/photoshop.png",
+        name: "Adobe Photoshop"
+    },
+    FirebaseStorage: {
+        img: "./tech/firebasestorage.png",
+        name: "Firebase Store"
+    },
+    FirebaseRealtimeDatabase: {
+        img: "./tech/firebaserealtime.png",
+        name: "Firebase Realtime Database"
+    },
+    ReactJS: {
+        img: "./tech/react.png",
+        name: "React JS"
+    },
+    Redux: {
+        img: "./tech/redux.png",
+        name: "Redux"
+    },
+    JSX: {
+        img: "./tech/jsx.png",
+        name: "JSX - JavaScript and XML"
+    },
+    SpringBoots: {
+        img: "./tech/springboot.png",
+        name: "Spring Boots"
+    },
+    ORM: {
+        img: "./tech/orm.png",
+        name: "ORM - Object Relational Mapping"
+    },
+    Hibernate: {
+        img: "./tech/hibernate.png",
+        name: "Hibernate"
+    },
+    SpringFramework: {
+        img: "./tech/spring.png",
+        name: "Spring Framework"
+    },
+    Thymeleaf: {
+        img: "./tech/thymeleaf.png",
+        name: "Thymeleaf"
+    },
+    JPA: {
+        img: "./tech/jpa.png",
+        name: "JPA - Java Persistence API"
+    },
+    Ajax: {
+        img: "./tech/ajax.png",
+        name: "AJAX - Asynchronous Javascript and XML"
+    },
+    jQuery: {
+        img: "./tech/jquery.png",
+        name: "jquery"
+    },
+    MySQL: {
+        img: "./tech/mySql.png",
+        name: "MySQL"
+    },
+    Bootstrap: {
+        img: "./tech/bootstrap.png",
+        name: "Bootstrap"
+    },
+    JSP: {
+        img: "./tech/jsp.png",
+        name: "JSP - Java Server Pages"
+    },
+    Servlet: {
+        img: "./tech/servlet.png",
+        name: "Servlet"
+    },
+    JDBC: {
+        img: "./tech/jdbc.png",
+        name: "JDBC - Java Dabase Connectivity"
+    },
+    JSTL: {
+        img: "./tech/jstl.png",
+        name: "JSTL - JSP Standard Tag Library"
+    }
+
+}
 const projectArr = [
     {
         duration: "2 Weeks",
@@ -250,7 +341,7 @@ const projectArr = [
         ],
         technologies: [
             "ReactJS",
-            "SpringBoot",
+            "SpringBoots",
             "SpringFramework",
             "ORM",
             "JPA",
@@ -287,7 +378,7 @@ const projectArr = [
             "JPA",
             "Hibernate",
             "Thymeleaf",
-            "SpringBoot",
+            "SpringBoots",
             "Ajax",
             "jQuery"
         ],
@@ -329,6 +420,7 @@ const projectArr = [
     },
 ];
 let array;
+let intervalArr = [];
 function setupInformation () {
     let contactData = "";
     let linkData = "";
@@ -420,8 +512,10 @@ function setupProject () {
                         <div class="cv-page-body-project-detail">`
     for (let project in projectArr) {
         let object = projectArr[project];
-        data += `<div class="borderradius cv-page-body-project-detail-item boxshadow-outset">
-                    <div class="cv-page-body-project-detail-item-img"
+        data += `<div class="borderradius cv-page-body-project-detail-item boxshadow-outset"
+                onmouseover="changeImgInterval('display-${object.name}','${object.img}')"
+                onmouseleave="delInterval()">
+                    <div id="display-${object.name}" class="cv-page-body-project-detail-item-img"
                         style="background-image: url('${object.img[0]}')"
                     ></div>
                     <div class="cv-page-body-project-detail-item-name textAlert">
@@ -433,7 +527,8 @@ function setupProject () {
                     <div class="cv-page-body-project-detail-item-time">
                         ⌛️ Duration: ${object.duration}
                     </div>
-                    <div class="cv-page-body-project-detail-item-more cursorPoint color4" title="See Detail">
+                    <div class="cv-page-body-project-detail-item-more cursorPoint color4" title="See Detail"
+                    onclick="showProjectDetail('${project}')">
                         Detail 📋
                     </div>
                     <div class="cv-page-body-project-detail-item-git cursorPoint" title="GitHub"
@@ -441,13 +536,11 @@ function setupProject () {
                     ></div>
                 </div>`
     }
-
-
     data += "</div>";
     document.getElementById("project").innerHTML = data;
 }
 function navigate (link) {
-    window.open(link, "_blank")
+    window.open(link, "_blank");
 }
 function showSkillName(idDisplay, name, action) {
     if (action == "show") {
@@ -519,8 +612,90 @@ function reduceText (str, length) {
 function closeBoard () {
     document.getElementById("viewport").style.display = "none";
 }
+function changeImgInterval (id, picArr) {
+    delInterval();
+    let i = 1;
+    let pictureArray = picArr.split(",");
+    let idInterval = setInterval(() => {
+        let index = i % pictureArray.length;
+        let pic = pictureArray[index];
+        document.getElementById(id).style.backgroundImage = `url('${pic}')`
+        i++;
+    }, 1000);
+    intervalArr.push(idInterval);
+}
+function delInterval () {
+    for (let i = 0; i < intervalArr.length; i++) {
+        let index = intervalArr[i];
+        clearInterval(index);
+    }
+    intervalArr = [];
+}
+function showProjectDetail (index) {
+    let project = projectArr[index];
+    let descriptionArr = "";
+    for (let i = 0; i < project.description.length; i++) {
+        descriptionArr += `<p>👉 ${project.description[i]}</p>`
+    }
+    let imgArr = "";
+    for (let i = 0; i < project.img.length; i++) {
+        imgArr += `<div class="project-detail-img-arr-item borderradius cursorPoint" 
+                    style="background-image: url('${project.img[i]}');
+                    ${i == 0 && 'border: 3px #c1151a solid'}"
+                    onclick="chooseProjectPic('${project.img[i]}', this)"
+                    ></div>`
+    }
+    let techArr = "<div id='techDisplay' class='color3'>Technical</div>";
+    for (let i = 0; i < project.technologies.length; i++) {
+        let urlImg = iconTech[project.technologies[i]].img;
+        let urlName = iconTech[project.technologies[i]].name;
+        techArr += `<div class="project-detail-tech-item"
+                    style="background-image: url('${urlImg}')"
+                    onmouseover="showTechName('${urlName}')"
+                    onmouseleave="closeShowTechName()"
+                    ></div>`
+    }
 
-
+    let data =
+        `<div class="project-detail-name">PROJECT: ${project.name}</div>
+        <div class="project-detail-git cursorPoint" title="Go to Github"
+            onclick="navigate('${project.link}')"
+        ></div>
+        <div class="project-detail-close cursorPoint" title="Close the Board"
+            onclick="closeProjectBoard()"
+        ></div>
+        <div class="project-detail-duration">🕐 Duration: <span class="textAlert">${project.duration}</span></div>
+        <div class="project-detail-role">🛠 Role: <span class="textAlert">${project.role}</span></div>
+        <div class="project-detail-description borderradius boxshadow-inset color0">
+            ${descriptionArr}
+        </div>
+        <div class="project-detail-tech">
+            ${techArr}
+        </div>
+        <div class="project-detail-img borderradius boxshadow-inset color0">
+            <div class="project-detail-img-display">
+                <div id="displayProjectImg" style="background-image: url('${project.img[0]}')"></div>
+            </div>
+            <div class="project-detail-img-arr">${imgArr}</div> 
+        </div>`
+    document.getElementById("detailProject").innerHTML = data;
+    document.getElementById('detailProject').style.display = "grid";
+}
+function showTechName (name) {
+    document.getElementById("techDisplay").innerHTML = `<span class="textAlert">${name}</span>`
+}
+function closeShowTechName () {
+    document.getElementById("techDisplay").innerText = `Technical`;
+}
+function chooseProjectPic (link, element) {
+    document.getElementById("displayProjectImg").style.backgroundImage = `url('${link}')`
+    let allDiv = document.querySelectorAll(".project-detail-img-arr-item");
+    allDiv.forEach(e => e.style.border = "3px #ccc5d9 solid");
+    element.style.border = `3px #c1151a solid`;
+}
+function closeProjectBoard () {
+    document.getElementById('detailProject').style.display = "none";
+}
 setupWordExp();
 setupInformation();
 setupSkill();

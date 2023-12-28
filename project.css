@@ -1,0 +1,140 @@
+#detailProject {
+    position: fixed;
+    width: var(--viewportWidth);
+    height: var(--viewportHeight);
+    top: calc((100vh - var(--viewportHeight))/2);
+    left: calc((100% - var(--viewportWidth))/2);
+    background-color: rgba(255, 255, 255, 0.9);
+    display: none;
+    padding: calc(var(--offset)/2);
+    animation: ease-in-out 0.2s leftSlide;
+    grid-template-areas:
+            "name none git close"
+            "time time time time"
+            "role role role role"
+            "info img img img"
+            "tech tech tech tech";
+    grid-template-columns: 1fr 2fr repeat(2, 80px);
+    grid-template-rows: 50px repeat(2, 30px) 1fr 80px;
+}
+.project-detail-img {
+    grid-area: img;
+    width: calc(100% - var(--offset) / 2);
+    margin-left: calc(var(--offset)/2);
+    display: grid;
+    grid-template-columns: 1fr 250px;
+}
+.project-detail-img-display {
+
+}
+.project-detail-img-arr-item {
+    width: calc(100% - 20px);
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+    border: 3px #ccc5d9 solid;
+    transition-duration: 0.2s;
+}
+.project-detail-img-arr-item:hover {
+    scale: 1.03;
+    transition-duration: 0.2s;
+    border: 3px #e49db1 solid;
+}
+.project-detail-img-arr {
+    height: calc(var(--viewportHeight) - 50px - 30px * 2 - 80px - var(--offset));
+    overflow: auto;
+    border-left: #151018 1px solid;
+}
+.project-detail-name {
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    grid-area: name;
+}
+.project-detail-git {
+    grid-area: git;
+    background-image: url("icon/git.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition-duration: 0.2s;
+}
+.project-detail-git:hover {
+    transition-duration: 0.2s;
+    scale: 1.1;
+}
+.project-detail-close {
+    grid-area: close;
+    background-image: url("icon/close-array.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition-duration: 0.2s;
+}
+.project-detail-close:hover {
+    transition-duration: 0.2s;
+    scale: 1.1;
+}
+.project-detail-duration {
+    grid-area: time;
+}
+.project-detail-role {
+    grid-area: role;
+}
+.project-detail-description {
+    grid-area: info;
+    padding: calc(var(--offset)/2);
+}
+#displayProjectImg {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: calc(var(--offset)/4);
+    width: calc(100% - var(--offset)/2);
+    height: calc(100% - var(--offset)/2);
+    transition: background-image 0.2s ease-in-out;
+}
+.project-detail-img-arr::-webkit-scrollbar {
+    width: 10px;
+    position: absolute;
+}
+.project-detail-img-arr::-webkit-scrollbar-thumb {
+    background-color: #ccc5d9;
+    border-radius: 20px;
+}
+.project-detail-img-arr::-webkit-scrollbar-button {
+    opacity: 0;
+}
+.project-detail-tech {
+    grid-area: tech;
+    display: flex;
+    flex-direction: row;
+}
+.project-detail-tech-item {
+    width: 50px;
+    aspect-ratio: 1/1;
+    margin: 5px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: alias;
+    transition-duration: 0.2s;
+}
+.project-detail-tech-item:hover {
+    scale: 1.1;
+    transition-duration: 0.2s;
+}
+#techDisplay {
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    height: calc(100% - 20px);
+    margin: 10px;
+    font-size: 18px;
+    cursor: default;
+    padding: 10px;
+}

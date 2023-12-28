@@ -8,7 +8,7 @@
     height: var(--viewportHeight);
     top: calc((100vh - var(--viewportHeight))/2);
     left: calc((100% - var(--viewportWidth))/2);
-    background-color: rgba(21, 16, 24, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     display: none;
     padding: calc(var(--offset)/2);
     grid-template-rows: 50px 1fr 50px;
@@ -32,27 +32,19 @@
     grid-area: close;
     background-image: url("icon/close-array.png");
 }
-#viewport-previous {
-    grid-area: previous;
-    background-image: url("icon/prev-icon.png");
-}
 #viewport-detail {
     grid-area: detail;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-}
-#viewport-next {
-    grid-area: next;
-    background-image: url("icon/next-icon.png");
+    transition: background-image 0.5s ease-in-out;
 }
 #viewport-description {
     grid-area: description;
-    color: white;
     display: flex;
     align-items: center;
 }
-#viewport-close, #viewport-previous, #viewport-next {
+#viewport-close {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
