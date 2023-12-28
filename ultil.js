@@ -181,7 +181,7 @@ const workExp = [
     {
         img: "./icon/searee.png",
         time: "2018 - 2022",
-        company: "SEAREE REFRIGERATION ELECTRICAL ENGINEERING CORPORATION",
+        company: "SEAREE CORPORATION",
         role: "M&E Engineer - BIM Manager"
     },
     {
@@ -210,7 +210,7 @@ const iconTech = {
     },
     FirebaseRealtimeDatabase: {
         img: "./tech/firebaserealtime.png",
-        name: "Firebase Realtime Database"
+        name: "Realtime Database"
     },
     ReactJS: {
         img: "./tech/react.png",
@@ -222,7 +222,7 @@ const iconTech = {
     },
     JSX: {
         img: "./tech/jsx.png",
-        name: "JSX - JavaScript and XML"
+        name: "JavaScript & XML"
     },
     SpringBoots: {
         img: "./tech/springboot.png",
@@ -230,7 +230,7 @@ const iconTech = {
     },
     ORM: {
         img: "./tech/orm.png",
-        name: "ORM - Object Relational Mapping"
+        name: "ORM"
     },
     Hibernate: {
         img: "./tech/hibernate.png",
@@ -246,11 +246,11 @@ const iconTech = {
     },
     JPA: {
         img: "./tech/jpa.png",
-        name: "JPA - Java Persistence API"
+        name: "JPA"
     },
     Ajax: {
         img: "./tech/ajax.png",
-        name: "AJAX - Asynchronous Javascript and XML"
+        name: "AJAX"
     },
     jQuery: {
         img: "./tech/jquery.png",
@@ -266,7 +266,7 @@ const iconTech = {
     },
     JSP: {
         img: "./tech/jsp.png",
-        name: "JSP - Java Server Pages"
+        name: "JSP"
     },
     Servlet: {
         img: "./tech/servlet.png",
@@ -274,11 +274,11 @@ const iconTech = {
     },
     JDBC: {
         img: "./tech/jdbc.png",
-        name: "JDBC - Java Dabase Connectivity"
+        name: "JDBC"
     },
     JSTL: {
         img: "./tech/jstl.png",
-        name: "JSTL - JSP Standard Tag Library"
+        name: "JSTL"
     }
 
 }
@@ -513,6 +513,7 @@ function setupProject () {
     for (let project in projectArr) {
         let object = projectArr[project];
         data += `<div class="borderradius cv-page-body-project-detail-item boxshadow-outset"
+                style="animation: ease-in-out 0.2s ${project % 2 == 0 ? 'leftSlide' : 'rightSlide'}"
                 onmouseover="changeImgInterval('display-${object.name}','${object.img}')"
                 onmouseleave="delInterval()">
                     <div id="display-${object.name}" class="cv-page-body-project-detail-item-img"

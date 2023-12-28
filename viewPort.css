@@ -1,6 +1,6 @@
 :root {
-    --viewportWidth: 1800px;
-    --viewportHeight: 900px
+    --viewportWidth: 1400px;
+    --viewportHeight: 810px
 }
 #viewport {
     position: fixed;
@@ -69,4 +69,27 @@
     scale: 1.03;
     transition-duration: 0.2s;
     border: 3px #e49db1 solid;
+}
+@media screen and (max-width: 1440px) {
+    :root {
+        --viewportWidth: 1200px;
+        --viewportHeight: 700px
+    }
+}
+@media screen and (max-width: 1024px) {
+    :root {
+        --viewportWidth: 1000px;
+        --viewportHeight: 700px
+    }
+    #viewport {
+        grid-template-columns: 150px 50px 1fr 50px;
+    }
+    .viewport-array-div {
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+
+    }
+}
+@media screen and (max-width: 414px) {
+
 }

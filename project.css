@@ -9,7 +9,7 @@
     padding: calc(var(--offset)/2);
     animation: ease-in-out 0.2s leftSlide;
     grid-template-areas:
-            "name none git close"
+            "name name git close"
             "time time time time"
             "role role role role"
             "info img img img"
@@ -23,9 +23,6 @@
     margin-left: calc(var(--offset)/2);
     display: grid;
     grid-template-columns: 1fr 250px;
-}
-.project-detail-img-display {
-
 }
 .project-detail-img-arr-item {
     width: calc(100% - 20px);
@@ -86,6 +83,8 @@
 .project-detail-description {
     grid-area: info;
     padding: calc(var(--offset)/2);
+    overflow: auto;
+
 }
 #displayProjectImg {
     background-position: center;
@@ -96,15 +95,15 @@
     height: calc(100% - var(--offset)/2);
     transition: background-image 0.2s ease-in-out;
 }
-.project-detail-img-arr::-webkit-scrollbar {
+.project-detail-img-arr::-webkit-scrollbar, .project-detail-description::-webkit-scrollbar {
     width: 10px;
     position: absolute;
 }
-.project-detail-img-arr::-webkit-scrollbar-thumb {
+.project-detail-img-arr::-webkit-scrollbar-thumb, .project-detail-description::-webkit-scrollbar-thumb {
     background-color: #ccc5d9;
     border-radius: 20px;
 }
-.project-detail-img-arr::-webkit-scrollbar-button {
+.project-detail-img-arr::-webkit-scrollbar-button, .project-detail-description::-webkit-scrollbar-button {
     opacity: 0;
 }
 .project-detail-tech {
@@ -137,4 +136,19 @@
     font-size: 18px;
     cursor: default;
     padding: 10px;
+}
+@media screen and (max-width: 1440px) {
+
+}
+@media screen and (max-width: 1024px) {
+    .project-detail-img {
+        grid-template-columns: 1fr 100px;
+    }
+    .project-detail-img-arr-item {
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+    }
+}
+@media screen and (max-width: 414px) {
+
 }
