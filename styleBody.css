@@ -198,17 +198,16 @@
     .cv-page-body-project-detail-item-name {
         padding: 10px 0 10px calc(var(--offset)/2);
     }
-}
-@media screen and (max-width: 1024px) {
-    .cv-page-body-project-detail {
-        grid-template-columns: 1fr;
-    }
     .workExperience-container {
         grid-template-rows: 30px 40px 20px;
         grid-template-columns: 125px auto;
+    }
+    .cv-page-body-project-detail {
+        grid-template-columns: 1fr;
     }
     .cv-page-body-project-detail-item-img {
         width: 250px;
     }
 }
+
 
