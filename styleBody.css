@@ -135,7 +135,7 @@
 .cv-page-body-project-detail-item-name {
     font-size: 18px;
     grid-area: name;
-    padding: 10px 0 10px var(--offset);
+    padding: 10px 0 10px calc(var(--offset)/2);
 }
 .cv-page-body-project-detail-item-role {
     grid-area: role;
