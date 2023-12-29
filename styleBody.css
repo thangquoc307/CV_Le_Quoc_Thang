@@ -52,6 +52,7 @@
     grid-template-rows: 30px repeat(2, 20px);
     grid-template-columns: 100px auto;
     border-bottom: #151018 1px dashed;
+    padding-bottom: 10px;
 }
 .workExperience-img {
     width: 100%;

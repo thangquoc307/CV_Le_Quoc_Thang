@@ -274,4 +274,13 @@
     :root {
         --widthPage: 900px;
     }
+    .cv-page-body {
+        grid-template-areas:
+            "award description"
+            "certificate description"
+            "certificate skill"
+            "workExperience workExperience"
+            "project project"
+            "footer footer";
+    }
 }
