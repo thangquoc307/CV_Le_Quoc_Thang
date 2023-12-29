@@ -69,6 +69,12 @@ const certificate = [
         type: "mysql"
     },
     {
+        img: "./certificate/python_basic_certificate",
+        name: "Python (Basic) skill Certificate",
+        time: "29-12-2023",
+        type: "python"
+    },
+    {
         img: "./certificate/Certificate_Git",
         name: "Git Manage Certificate",
         time: "04-07-2023",
@@ -102,7 +108,8 @@ const icon = {
     scrum: "./icon/scrum.png",
     lhx: "./icon/learn.png",
     kanban: "./icon/kanban.png",
-    award: "./icon/award.png"
+    award: "./icon/award.png",
+    python: "./icon/python.png"
 }
 const skillList = {
     language: {
@@ -115,6 +122,10 @@ const skillList = {
             {
                 name: "JavaScript",
                 img: "./icon/JS.png"
+            },
+            {
+                name: "Python",
+                img: "./icon/python.png"
             },
             {
                 name: "HTML",
