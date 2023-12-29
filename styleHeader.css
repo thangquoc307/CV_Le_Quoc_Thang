@@ -16,7 +16,7 @@
     border-top-right-radius: var(--borderRadius);
     padding: var(--offset);
     display: grid;
-    grid-template-areas: "avatar name name logo" "avatar link map info";
+    grid-template-areas: "avatar name name name" "avatar link map info";
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: calc(var(--heightHeader) - 2 * var(--offset)) 1fr 150px var(--heightHeader);
     background-image: url("logo/r-logo.png");
@@ -261,7 +261,7 @@
     }
     .cv-page-header {
         padding: calc(var(--offset)/2);
-        grid-template-areas: "avatar name name logo" "avatar link map info";
+        grid-template-areas: "avatar name name name" "avatar link map info";
     }
     .cv-page-header-map {
         height: calc(var(--heightHeader) / 2 - var(--offset) / 2);
@@ -271,5 +271,7 @@
     }
 }
 @media screen and (max-width: 1024px) {
-
+    :root {
+        --widthPage: 900px;
+    }
 }

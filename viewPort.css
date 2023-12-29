@@ -92,5 +92,8 @@
     }
 }
 @media screen and (max-width: 1024px) {
-
+    :root {
+        --viewportWidth: 900px;
+        --viewportHeight: 500px
+    }
 }
