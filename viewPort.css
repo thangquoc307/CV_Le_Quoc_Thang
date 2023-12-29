@@ -3,6 +3,7 @@
     --viewportHeight: 810px
 }
 #viewport {
+    z-index: 2;
     position: fixed;
     width: var(--viewportWidth);
     height: var(--viewportHeight);

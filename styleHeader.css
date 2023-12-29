@@ -240,7 +240,16 @@
     color: #57546a;
     font-weight: bold;
 }
-
+#filter{
+    background-color: rgba(21, 16, 24, 0.8);
+    width: 100%;
+    height: calc(100vh);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+    z-index: 1;
+}
 @media screen and (max-width: 1920px) {
     :root {
         --widthPage: 1200px;

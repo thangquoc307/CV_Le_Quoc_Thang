@@ -40,7 +40,7 @@ const certificate = [
     },
     {
         img: "./certificate/javascript_basic_certificate",
-        name: "Java Script (Basic) Skill Certificate",
+        name: "JavaScript (Basic) Skill Certificate",
         time: "24-11-2023",
         type: "javascript"
     },
@@ -113,7 +113,7 @@ const skillList = {
                 img: "./icon/java.png"
             },
             {
-                name: "Java Script",
+                name: "JavaScript",
                 img: "./icon/JS.png"
             },
             {
@@ -121,7 +121,7 @@ const skillList = {
                 img: "./icon/html.png"
             },
             {
-                name: "Css",
+                name: "CSS",
                 img: "./icon/css.png"
             }
         ]
@@ -552,6 +552,7 @@ function showSkillName(idDisplay, name, action) {
 }
 function showImage(index, arrayInd) {
     closeProjectBoard();
+    openFilter();
     document.getElementById("viewport").style.display = "grid";
     let arrayCertificate = "";
     switch (arrayInd) {
@@ -612,6 +613,7 @@ function reduceText (str, length) {
     }
 }
 function closeBoard () {
+    closeFilter();
     document.getElementById("viewport").style.display = "none";
 }
 function changeImgInterval (id, picArr) {
@@ -635,6 +637,7 @@ function delInterval () {
 }
 function showProjectDetail (index) {
     closeBoard();
+    openFilter();
     let project = projectArr[index];
     let descriptionArr = "";
     for (let i = 0; i < project.description.length; i++) {
@@ -697,7 +700,18 @@ function chooseProjectPic (link, element) {
     element.style.border = `3px #c1151a solid`;
 }
 function closeProjectBoard () {
+    closeFilter();
     document.getElementById('detailProject').style.display = "none";
+}
+function openFilter () {
+    document.getElementById("filter").style.display = "block";
+}
+function closeFilter () {
+    document.getElementById("filter").style.display = "none";
+}
+function clickAtFilter () {
+    closeBoard();
+    closeProjectBoard();
 }
 setupWordExp();
 setupInformation();

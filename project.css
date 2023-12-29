@@ -16,6 +16,7 @@
             "tech tech tech tech";
     grid-template-columns: 1fr 2fr repeat(2, 80px);
     grid-template-rows: 50px repeat(2, 30px) 1fr 80px;
+    z-index: 2;
 }
 .project-detail-img {
     grid-area: img;
