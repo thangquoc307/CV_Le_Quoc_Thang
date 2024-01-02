@@ -75,6 +75,12 @@ const certificate = [
         type: "python"
     },
     {
+        img: "./certificate/software_engineer_intern_certificate",
+        name: "Software Engineer (Intern) Certificate",
+        time: "02-01-2024",
+        type: "software"
+    },
+    {
         img: "./certificate/Certificate_Git",
         name: "Git Manage Certificate",
         time: "04-07-2023",
@@ -109,7 +115,8 @@ const icon = {
     lhx: "./icon/learn.png",
     kanban: "./icon/kanban.png",
     award: "./icon/award.png",
-    python: "./icon/python.png"
+    python: "./icon/python.png",
+    software: "./icon/software.png"
 }
 const skillList = {
     language: {
