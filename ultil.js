@@ -45,6 +45,12 @@ const certificate = [
         type: "javascript"
     },
     {
+        img: "./certificate/javascript_intermediate_certificate",
+        name: "JavaScript (Intermediate) Skill Certificate",
+        time: "21-01-2024",
+        type: "javascript"
+    },
+    {
         img: "./certificate/problem_solving_basic_certificate",
         name: "Problem Solving (Basic) Skill Certificate",
         time: "02-08-2023",
@@ -57,15 +63,21 @@ const certificate = [
         type: "problemSolving"
     },
     {
+        img: "./certificate/sql_basic_certificate",
+        name: "SQL (Basic) skill Certificate",
+        time: "15-10-2023",
+        type: "mysql"
+    },
+    {
         img: "./certificate/sql_advanced_certificate",
         name: "SQL (Advanced) Skill Certificate",
         time: "24-11-2023",
         type: "mysql"
     },
     {
-        img: "./certificate/sql_basic_certificate",
-        name: "SQL (Basic) skill Certificate",
-        time: "15-10-2023",
+        img: "./certificate/sql_intermediate_certificate",
+        name: "SQL (Intermediate) skill Certificate",
+        time: "21-01-2024",
         type: "mysql"
     },
     {
