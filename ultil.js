@@ -153,6 +153,10 @@ const skillList = {
             {
                 name: "CSS",
                 img: "./icon/css.png"
+            },
+            {
+                name: "Dart",
+                img: "./icon/dart.png"
             }
         ]
     },
@@ -189,6 +193,14 @@ const skillList = {
                 img: "./icon/redux.png"
             },
             {
+                name: "Angular",
+                img: "./icon/angular.png"
+            },
+            {
+                name: "Flutter",
+                img: "./icon/flutter.png"
+            },
+            {
                 name: "BootsTrap",
                 img: "./icon/bootstrap.png"
             }
@@ -196,6 +208,12 @@ const skillList = {
     },
 };
 const workExp = [
+    {
+        img: "./icon/biti.png",
+        time: "from 12/2023",
+        company: "BITI HIGHTECH",
+        role: "web full stack and mobile app developer"
+    },
     {
         img: "./icon/codegym.png",
         time: "6/2023 - 12/2023",
