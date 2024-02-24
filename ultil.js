@@ -27,10 +27,28 @@ const link = [
 ];
 const certificate = [
     {
+        img: "./certificate/SeareeAward",
+        name: "Searee - Outstanding Employee",
+        time: "08-02-2021",
+        type: "award"
+    },
+    {
         img: "./certificate/code_marathon",
         name: "Hackathon - National Algorithm Competition",
         time: "05-09-2023",
         type: "award"
+    },
+    {
+        img: "./certificate/frontend_developer_react_certificate",
+        name: "Frontend Developer (React) Certificate",
+        time: "24-02-2024",
+        type: "software"
+    },
+    {
+        img: "./certificate/software_engineer_intern_certificate",
+        name: "Software Engineer (Intern) Certificate",
+        time: "02-01-2024",
+        type: "software"
     },
     {
         img: "./certificate/java_basic_certificate",
@@ -86,12 +104,7 @@ const certificate = [
         time: "29-12-2023",
         type: "python"
     },
-    {
-        img: "./certificate/software_engineer_intern_certificate",
-        name: "Software Engineer (Intern) Certificate",
-        time: "02-01-2024",
-        type: "software"
-    },
+
     {
         img: "./certificate/Certificate_Git",
         name: "Git Manage Certificate",
