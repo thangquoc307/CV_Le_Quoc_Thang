@@ -51,6 +51,12 @@ const certificate = [
         type: "software"
     },
     {
+        img: "./certificate/angular_intermediate_certificate",
+        name: "Angular (Intermediate) Skill Certificate",
+        time: "27-02-2024",
+        type: "angular"
+    },
+    {
         img: "./certificate/java_basic_certificate",
         name: "Java (Basic) Skill Certificate",
         time: "13-10-2023",
@@ -104,6 +110,12 @@ const certificate = [
         time: "29-12-2023",
         type: "python"
     },
+    {
+        img: "./certificate/rest_api_intermediate_certificate",
+        name: "Rest API (Intermediate) skill Certificate",
+        time: "26-02-2024",
+        type: "api"
+    },
 
     {
         img: "./certificate/Certificate_Git",
@@ -141,7 +153,9 @@ const icon = {
     kanban: "./icon/kanban.png",
     award: "./icon/award.png",
     python: "./icon/python.png",
-    software: "./icon/software.png"
+    software: "./icon/software.png",
+    api: "./icon/api.png",
+    angular: './icon/angular.png'
 }
 const skillList = {
     language: {
