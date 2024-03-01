@@ -354,10 +354,64 @@ const iconTech = {
     JSTL: {
         img: "./tech/jstl.png",
         name: "JSTL"
+    },
+    Flutter: {
+        img: "./tech/flutter.png",
+        name: "Flutter"
+    },
+    Provider: {
+        img: "./tech/provider.png",
+        name: "Provider"
     }
 
 }
 const projectArr = [
+    {
+        duration: "2 Weeks",
+        name: "ABC - LOGISTIC",
+        role: "Mobile developer, Backend developer",
+        description: [
+            `Management Software, designed to streamline and optimize 
+            inventory operations for logistic businesses. Software aims 
+            to warehouses manage stock, ensuring efficiency, accuracy, 
+            and real-time visibility.`,
+            `Ability to effortlessly create and manage both inbound and 
+            outbound orders. Receiving new shipments or fulfilling customer 
+            orders, Provides intuitive tools to seamlessly track every step 
+            of the process, from item allocation to shipment dispatch.`,
+            `Inventory tracking capabilities. Users can easily monitor the 
+            location and status of each item within the warehouse. QR code 
+            scanning and integration with various IoT devices. Users can 
+            monitor warehouse activities in real-time`,
+
+        ],
+        technologies: [
+            "MySQL",
+            "SpringBoots",
+            "ORM",
+            "Hibernate",
+            "Flutter",
+            "Provider",
+        ],
+        img: [
+            "./image/abc_logistic/0.png",
+            "./image/abc_logistic/1.png",
+            "./image/abc_logistic/2.png",
+            "./image/abc_logistic/3.png",
+            "./image/abc_logistic/4.png",
+            "./image/abc_logistic/5.png",
+            "./image/abc_logistic/6.png",
+            "./image/abc_logistic/7.png",
+            "./image/abc_logistic/8.png",
+            "./image/abc_logistic/9.png",
+            "./image/abc_logistic/10.png",
+            "./image/abc_logistic/11.png",
+            "./image/abc_logistic/12.png",
+            "./image/abc_logistic/13.png",
+
+        ],
+        link: "https://github.com/thangquoc307/abc_logistic_outbound_mobile"
+    },
     {
         duration: "2 Weeks",
         name: "LQT - SERVICE (PERSONAL PROJECT)",
