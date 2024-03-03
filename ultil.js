@@ -45,6 +45,12 @@ const certificate = [
         type: "software"
     },
     {
+        img: "./certificate/software_engineer_certificate",
+        name: "Software Engineer Certificate",
+        time: "03-03-2024",
+        type: "software"
+    },
+    {
         img: "./certificate/software_engineer_intern_certificate",
         name: "Software Engineer (Intern) Certificate",
         time: "02-01-2024",
