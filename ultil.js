@@ -161,7 +161,8 @@ const icon = {
     python: "./icon/python.png",
     software: "./icon/software.png",
     api: "./icon/api.png",
-    angular: './icon/angular.png'
+    angular: './icon/angular.png',
+    sqlserver: "./icon/SQLServer.png"
 }
 const skillList = {
     language: {
@@ -203,6 +204,10 @@ const skillList = {
             {
                 name: "Firebase Realtime Database",
                 img: "./icon/realtimeDatabase.png"
+            },
+            {
+                name: "SQL Server",
+                img: "./icon/SQLServer.png"
             }
         ]
     },
