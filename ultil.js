@@ -122,6 +122,12 @@ const certificate = [
         time: "26-02-2024",
         type: "api"
     },
+    {
+        img: "./certificate/c_sharp_basic certificate",
+        name: "C Sharp (Basic) skill Certificate",
+        time: "20-08-2024",
+        type: "csharp"
+    },
 
     {
         img: "./certificate/Certificate_Git",
@@ -162,7 +168,8 @@ const icon = {
     software: "./icon/software.png",
     api: "./icon/api.png",
     angular: './icon/angular.png',
-    sqlserver: "./icon/SQLServer.png"
+    sqlserver: "./icon/SQLServer.png",
+    csharp: "./icon/csharp.png"
 }
 const skillList = {
     language: {
@@ -208,6 +215,10 @@ const skillList = {
             {
                 name: "SQL Server",
                 img: "./icon/SQLServer.png"
+            },
+            {
+                name: "Postgre SQL",
+                img: "./icon/postgre.png"
             }
         ]
     },
@@ -247,8 +258,14 @@ const skillList = {
 };
 const workExp = [
     {
+        img: "./icon/fsoft.png",
+        time: "from 4/2024",
+        company: "FPT SOFTWARE",
+        role: "Java developer"
+    },
+    {
         img: "./icon/biti.png",
-        time: "from 12/2023",
+        time: "12/2023 - 4/2024",
         company: "BITI HIGHTECH",
         role: "web full stack and mobile app developer"
     },
@@ -377,6 +394,34 @@ const iconTech = {
 
 }
 const projectArr = [
+    {
+        duration: "2 Weeks",
+        name: "APP - WAREHOUSE",
+        role: "Programmer",
+        description: [
+            `Warehouse management software is designed to streamline 
+            and optimize the process of tracking inventory and managing 
+            records.`,
+            `Controlling storage data, monitor stock movement, compare records, 
+            and receive alerts for discrepancies.`,
+            `Application supports generating comprehensive reports in both Excel and PDF formats, 
+            enabling detailed reporting and analysis.`,
+        ],
+        technologies: [
+            "SpringFramework",
+            "JSP",
+            "Thymeleaf",
+            "Ajax",
+            "jQuery"
+        ],
+        img: [
+            "./image/sss_warehouse/0.jpg",
+            "./image/sss_warehouse/1.jpg",
+            "./image/sss_warehouse/2.jpg",
+            "./image/sss_warehouse/3.jpg",
+        ],
+        link: "https://github.com/thangquoc307/Nhat-Ha_Warehouse"
+    },
     {
         duration: "2 Weeks",
         name: "ABC - LOGISTIC",
